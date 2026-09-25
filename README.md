@@ -2,12 +2,12 @@
 
 Vibe-coded with Anthropic Claude (Sonnet 5) using Python and PySide6.
 
-A standalone desktop app that shows live process memory usage as a treemap, refreshing automatically. Runs on:
+A desktop app that shows process memory usage as a treemap. Runs on:
 
 * **FreeBSD** – via `ps`, since FreeBSD has no `/proc` by default
-* **Linux distros** with a GUI – via `/proc`, unchanged from earlier versions of this app.
+* **Linux distros** with a GUI – via `/proc`, unchanged from earlier versions of this app
 
-The platform is detected automatically at startup; there is nothing to configure.
+– the platform is detected automatically. 
 
 ## Install
 
@@ -17,13 +17,13 @@ The platform is detected automatically at startup; there is nothing to configure
 pip install PySide6 --break-system-packages
 ```
 
-**FreeBSD** – simplest is to install the PySide6 port directly; this needs no `pip` and no knowledge of Python packaging at all:
+**FreeBSD** – simplest is to install the PySide6 port directly; this needs no `pip` and no knowledge of Python packaging:
 
 ```sh
 pkg install lang/python3 devel/pyside6
 ```
 
-If you'd prefer to use `pip` on FreeBSD instead:
+If you'd prefer to use `pip` on FreeBSD:
 
 ```sh
 pkg install devel/py-pip
@@ -42,7 +42,7 @@ On FreeBSD, running as your normal user will show every process you have permiss
 
 **Live refresh** – choose 5 / 15 / 30 / 60 seconds from the drop-down menu, or click _Refresh now_.
 
-**Grouped apps** – Firefox (including its sandboxed "Web Content", "Isolated Web Co", etc. sub-processes), Chrome/Chromium, Thunderbird, VS Code, Java, Python, Node, and VLC all aggregate into a single block, so a multi-process browser shows as one meaningful rectangle instead of dozens of slivers.
+**Grouped processes** – Firefox (including its sandboxed "Web Content", "Isolated Web Co", etc. sub-processes), Chrome/Chromium, Thunderbird, VS Code, Java, Python, Node, and VLC all aggregate into a single block, so a multi-process browser shows as one meaningful rectangle instead of dozens of slivers.
 
 **Consistent colours** – each app keeps the same colour across refreshes, assigned the first time it's seen.
 
@@ -83,7 +83,10 @@ Some processes owned by other users may be unreadable without elevated privilege
 
 A single implausible reading (over 64 GB for one process) is discarded rather than displayed, as a guard against a bad sample dominating the whole treemap.
 
-If you want to target a BSD significantly different from FreeBSD (OpenBSD, NetBSD, etc.), start a fresh conversation or fork this script – their `ps` output formats and available keywords differ enough that they're best handled as their own case rather than bolted onto this one.
+If you want to target a BSD that is significantly different from FreeBSD (OpenBSD, NetBSD, etc.): `ps` output formats and available keywords differ enough that they're best handled as their own case rather than bolted onto this project. Maybe: 
+
+* start a fresh conversation with your preferred AI tool; or
+* fork this script.
 
 ## Acknowledgements and inspiration
 
