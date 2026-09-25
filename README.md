@@ -40,7 +40,7 @@ On FreeBSD, running as your normal user will show every process you have permiss
 
 ## Features
 
-**Live refresh** – choose 5 / 15 / 30 / 60 seconds from the drop-down, or click "Refresh now" for an immediate update.
+**Live refresh** – choose 5 / 15 / 30 / 60 seconds from the drop-down menu, or click _Refresh now_.
 
 **Grouped apps** – Firefox (including its sandboxed "Web Content", "Isolated Web Co", etc. sub-processes), Chrome/Chromium, Thunderbird, VS Code, Java, Python, Node, and VLC all aggregate into a single block, so a multi-process browser shows as one meaningful rectangle instead of dozens of slivers.
 
