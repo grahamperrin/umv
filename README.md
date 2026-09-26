@@ -9,6 +9,20 @@ A desktop app that shows process memory usage as a treemap. Runs on:
 
 – the platform is detected automatically. 
 
+## Screenshots
+
+KDE Plasma on FreeBSD in VirtualBox: 
+
+![screenshot](freebsd.webp)
+
+* _chrome_ processes using more than _firefox_ processes.
+
+Kubuntu: 
+
+![screenshot](kubuntu.png)
+
+* one _VirtualBoxVM_ block represents multiple virtual machines after closing the _Oracle VirtualBox Manager_ application.
+
 ## Install
 
 **Linux**:
